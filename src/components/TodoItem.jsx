@@ -1,4 +1,5 @@
 import styles from './TodoItem.module.css';
+import { AiFillDelete } from "react-icons/ai";
 function TodoItem({ todoname, tododate, handleDeleteItem }) {
   return (
     <div className="container">
@@ -10,7 +11,7 @@ function TodoItem({ todoname, tododate, handleDeleteItem }) {
           {tododate}
         </div>
         <div className="col-2">
-          <button type="button" className="btn btn-danger CustomBtn" onClick={() => handleDeleteItem(todoname)}>Delete</button>
+          <button type="button" className={`${styles.CustomBtn} btn btn-danger`} onClick={() => handleDeleteItem(todoname)}><AiFillDelete /></button>
         </div>
       </div>
     </div>

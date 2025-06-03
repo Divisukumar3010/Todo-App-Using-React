@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { BiMessageAdd } from "react-icons/bi";
 import styles from './AppTodo.module.css';
 function AddTodo({ handleNewItem }) {
 
@@ -20,7 +21,7 @@ function AddTodo({ handleNewItem }) {
   }
 
   return (
-    <div className={ `${styles['container']} container`}>
+    <div className={`${styles['container']} container`}>
       <div className={`${styles['row']} row`}>
         <div className="col-6">
           <input type="text" placeholder="Enter todo here" className={styles.input} value={todoname} onChange={handleNameChange} />
@@ -29,7 +30,7 @@ function AddTodo({ handleNewItem }) {
           <input type="time" className={styles.input} value={dueDate} onChange={handleDateChange} />
         </div>
         <div className="col-2">
-          <button type="button" className={`${styles['CustomBtn']} btn btn-success`} onClick={handleAddButtonClicked}>Add</ button>
+          <button type="button" className={`${styles['CustomBtn']} btn btn-success`} onClick={handleAddButtonClicked}><BiMessageAdd /></ button>
         </div>
       </div>
     </div>
